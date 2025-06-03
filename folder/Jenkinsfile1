@@ -1,0 +1,16 @@
+pipeline{
+  agent{
+    docker{
+      image: 'ubuntu:latest'
+    }
+  }
+  stages{
+    stage('docker-container'){
+      steps{
+        sh 'uname -a'
+        sh 'whoami'
+        sh 'hostname'
+      }
+    }
+  }
+}
